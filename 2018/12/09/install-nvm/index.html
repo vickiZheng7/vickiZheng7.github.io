@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>nvm的安装及使用 | vicki&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="介绍近期投入到了另外一个项目中进行并行开发，依据项目要求升级了node版本。但是，给原来的项目添加了依赖包之后，发布到开发环境时在执行机上却出了问题，原因是执行机上的node不支持添加依赖包版本。维护多个版本的node是个很麻烦的问题，直到我发现了nvm。nvm支持在同一个设备上维护多个node版本。 安装如果安装了node，请先卸载node，再来安装nvm。  安装或者更新nvm，在终端窗口输入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nvm的安装及使用">
+<meta property="og:url" content="http://yoursite.com/2018/12/09/install-nvm/index.html">
+<meta property="og:site_name" content="vicki&#39;s blog">
+<meta property="og:description" content="介绍近期投入到了另外一个项目中进行并行开发，依据项目要求升级了node版本。但是，给原来的项目添加了依赖包之后，发布到开发环境时在执行机上却出了问题，原因是执行机上的node不支持添加依赖包版本。维护多个版本的node是个很麻烦的问题，直到我发现了nvm。nvm支持在同一个设备上维护多个node版本。 安装如果安装了node，请先卸载node，再来安装nvm。  安装或者更新nvm，在终端窗口输入">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/12/09/install-nvm/nvm安装.png">
+<meta property="og:image" content="http://yoursite.com/2018/12/09/install-nvm/nvm版本.png">
+<meta property="og:updated_time" content="2018-12-10T17:00:04.871Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nvm的安装及使用">
+<meta name="twitter:description" content="介绍近期投入到了另外一个项目中进行并行开发，依据项目要求升级了node版本。但是，给原来的项目添加了依赖包之后，发布到开发环境时在执行机上却出了问题，原因是执行机上的node不支持添加依赖包版本。维护多个版本的node是个很麻烦的问题，直到我发现了nvm。nvm支持在同一个设备上维护多个node版本。 安装如果安装了node，请先卸载node，再来安装nvm。  安装或者更新nvm，在终端窗口输入">
+<meta name="twitter:image" content="http://yoursite.com/2018/12/09/install-nvm/nvm安装.png">
+  
+    <link rel="alternate" href="/atom.xml" title="vicki&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">vicki&#39;s blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-install-nvm" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/09/install-nvm/" class="article-date">
+  <time datetime="2018-12-09T14:31:17.000Z" itemprop="datePublished">2018-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      nvm的安装及使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>近期投入到了另外一个项目中进行并行开发，依据项目要求升级了node版本。但是，给原来的项目添加了依赖包之后，发布到开发环境时在执行机上却出了问题，原因是执行机上的node不支持添加依赖包版本。维护多个版本的node是个很麻烦的问题，直到我发现了<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm</a>。nvm支持在同一个设备上维护多个node版本。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>如果安装了node，请先卸载node，再来安装nvm。</strong></p>
+<ol>
+<li><p>安装或者更新nvm，在终端窗口输入：</p>
+<p> <code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash</code></p>
+ <img src="/2018/12/09/install-nvm/nvm安装.png">
+</li>
+<li><p>设置环境变量</p>
+<p> 根据安装之后的提示，设置环境变量，nvm才能正常使用。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;</span><br></pre></td></tr></table></figure>
+ <img src="/2018/12/09/install-nvm/nvm版本.png">
+</li>
+</ol>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ol>
+<li>安装node<br> 最新版本：<code>nvm install node</code><br> 指定版本：<code>nvm install 7.7.4</code></li>
+<li>使用node<br> 最新版本：<code>nvm use node</code><br> 指定版本：<code>nvm use 7.7.4</code></li>
+<li>查看<br> 可以安装的版本号：<code>nvm list-remote</code> or <code>nvm ls-remote</code><br> 已安装的版本号：<code>nvm list</code> or <code>nvm ls</code></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/09/install-nvm/" data-id="cjpik06p3000137gvv65rhmvz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/12/10/install-and-use-git-on-mac/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          mac下git的安装及使用
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/12/10/install-and-use-git-on-mac/">mac下git的安装及使用</a>
+          </li>
+        
+          <li>
+            <a href="/2018/12/09/install-nvm/">nvm的安装及使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 vicki Zheng<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
