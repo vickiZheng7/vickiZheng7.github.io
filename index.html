@@ -62,6 +62,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-pits-in-the-development-of-vue" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/12/18/pits-in-the-development-of-vue/" class="article-date">
+  <time datetime="2018-12-18T15:31:27.000Z" itemprop="datePublished">2018-12-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/18/pits-in-the-development-of-vue/">记录vue+elementui项目开发遇到的坑</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>因为没有很好的记录习惯，老是在重复的坑中跌了又跌，真的是要把自己气死了。研究了半天，这问题不就是我上次遇到的吗，欲哭无泪。趁此次教训，把之前遇到的问题整理一下，随时补充上来。</p>
+<h3 id="1-el-dialog中ztree没有被渲染出来"><a href="#1-el-dialog中ztree没有被渲染出来" class="headerlink" title="1. el-dialog中ztree没有被渲染出来"></a>1. el-dialog中ztree没有被渲染出来</h3><p>效果：在弹窗中，将数据渲染成一棵树，树组件使用的是ztree。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;el-dialog :title=&quot;此处要显示一棵树：&quot; :visible.sync=&quot;dialogVisible&quot;&gt;</span><br><span class="line">		&lt;div id=&quot;demo-tree&quot; class=&quot;ztree&quot;&gt;&lt;/div&gt;</span><br><span class="line">	&lt;/el-dialog&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	export default &#123;</span><br><span class="line">		data() &#123;</span><br><span class="line">			return &#123;</span><br><span class="line">				dialogvisible: false</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/12/18/pits-in-the-development-of-vue/" data-id="cjptwprj90000qigv7ivu554v" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-install-and-use-homebrew" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/16/install-and-use-homebrew/" class="article-date">
@@ -102,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/16/install-and-use-homebrew/" data-id="cjpr0xc3e0000r4ex3rxtdmkv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/16/install-and-use-homebrew/" data-id="cjptwprje0001qigvjmipq08r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -194,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/10/install-and-use-git-on-mac/" data-id="cjpr0xc3j0001r4exo1ubosc6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/10/install-and-use-git-on-mac/" data-id="cjptwprji0003qigv8ygb0jkf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -248,7 +287,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/09/install-nvm/" data-id="cjpr0xc3y0002r4exgfsw0u72" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/09/install-nvm/" data-id="cjptwprjg0002qigvlspy0gd6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,6 +326,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/12/18/pits-in-the-development-of-vue/">记录vue+elementui项目开发遇到的坑</a>
+          </li>
         
           <li>
             <a href="/2018/12/16/install-and-use-homebrew/">homebrew的安装及使用</a>
